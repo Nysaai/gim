@@ -12,9 +12,8 @@ Corso di Grafica in movimento 2025, SUPSI,
 - [Esercizio 1A: spostamento 3](https://nysaai.github.io/gim/esercizio_1A/spostamento_3.html)
 
 
-
 ## Esercizio 1B
-- 
+- [Esercizio 1B: logo animato](https://nysaai.github.io/gim/
 -
 -
 
