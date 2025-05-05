@@ -2,7 +2,7 @@
 Corso di Grafica in movimento 2025, SUPSI,
 
 ## Esercizio 1A
-- [Esercizio 1A: acceso spento 2](https://nysaai.github.io/gim/esercizio_1A/acceso_spento_2.html)
+- [Esercizio 1A: acceso spento 2](https://nysaai.github.io/SUPSI_2025/gim/esercizio_1A/acceso_spento_2.html)
 - [Esercizio 1A: acceso spento 3](https://nysaai.github.io/gim/esercizio_1A/acceso_spento_3.html)
 - [Esercizio 1A: aperto chiuso 2](https://nysaai.github.io/gim/esercizio_1A/aperto_chiuso_2.html)
 - [Esercizio 1A: aperto chiuso 3](https://nysaai.github.io/gim/esercizio_1A/aperto_chiuso_3.html)
