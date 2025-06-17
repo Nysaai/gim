@@ -30,4 +30,4 @@ Corso di Grafica in movimento 2025, SUPSI,
 - [Esercizio 3A: pong](https://nysaai.github.io/gim/esercizio_3A/esercizio_3A_pong/index.html)
 
 ## Esercizio 3B
-- [Esercizio 3B: orologio digitale](https://nysaai.github.io/gim/esercizio_3B/index.html)
+- [Esercizio 3B: orologio digitale](https://nysaai.github.io/gim/esercizio_3B/esercizio_3B_orologiodigitale/index.html)
