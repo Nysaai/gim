@@ -20,4 +20,5 @@ Corso di Grafica in movimento 2025, SUPSI,
 - [Esercizio 1C: commento testo Kleist](https://nysaai.github.io/gim/esercizio_1C/README.md)
 
 ## Esercizio 2
-- [Esercizio 2: parallasse](https://nysaai.github.io/gim/esercizio_2/index.html)
+- [Esercizio 2: parallasse animato](https://nysaai.github.io/gim/esercizio_2/index.html)
+- [Esercizio 2: parallasse interattivo](https://nysaai.github.io/gim/esercizio_2/index.html)
