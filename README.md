@@ -25,7 +25,8 @@ Corso di Grafica in movimento 2025, SUPSI,
 
 ## Esercizio 3A
 - [Esercizio 3A: pioggia e tuoni](https://nysaai.github.io/gim/esercizio_3A/esercizio_3A_pioggia)
-- [(Cliccare per sentire il suono)]
+- (Cliccare per sentire il suono)
+
 - [Esercizio 3A: pioggia 3D](https://nysaai.github.io/gim/esercizio_3A/esercizio_3A_pioggia3D)
 - [Esercizio 3A: neve](https://nysaai.github.io/gim/esercizio_3A/esercizio_3A_neve)
 - [Esercizio 3A: pong](https://nysaai.github.io/gim/esercizio_3A/esercizio_3A_pong/index.html)
