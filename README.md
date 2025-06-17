@@ -22,3 +22,12 @@ Corso di Grafica in movimento 2025, SUPSI,
 ## Esercizio 2
 - [Esercizio 2: parallasse animato](https://nysaai.github.io/gim/esercizio_2/index_animato.html)
 - [Esercizio 2: parallasse interattivo](https://nysaai.github.io/gim/esercizio_2/index_interattivo.html)
+
+## Esercizio 3A
+- [Esercizio 3A: pioggia e tuoni](https://nysaai.github.io/gim/)
+- [Esercizio 3A: pioggia 3D](https://nysaai.github.io/gim/)
+- [Esercizio 3A: neve](https://nysaai.github.io/gim/)
+- [Esercizio 3A: pong](https://nysaai.github.io/gim/)
+
+## Esercizio 3B
+- [Esercizio 3B: orologio digitale](https://nysaai.github.io/gim/)
