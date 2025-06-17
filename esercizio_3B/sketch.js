@@ -16,7 +16,7 @@ function windowResized() {
 
 function calculateFixedGrid() {
   // Spazio riservato per testi e margini
-  let topSpace = 120;  // Spazio per data e ora
+  let topSpace = 140;  // Spazio aumentato per data e ora
   let bottomSpace = 100;  // Spazio per info griglia e messaggi
   let sideMargin = 40;  // Margini laterali
   
@@ -147,13 +147,13 @@ function displayTime(h, m, s) {
   textAlign(CENTER, BOTTOM);
   textSize(24); 
   textStyle(NORMAL);
-  text(dataStr, width/2, gridStartY - 50);
+  text(dataStr, width/2, gridStartY - 70);
   
   fill(255);
   textAlign(CENTER, BOTTOM);
   textSize(42); 
   textStyle(BOLD);
-  text(timeStr, width/2, gridStartY - 10);
+  text(timeStr, width/2, gridStartY - 20);
 }
 
 function displayMovingInfo(secondsElapsed) {
