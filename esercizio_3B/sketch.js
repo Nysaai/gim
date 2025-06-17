@@ -15,13 +15,18 @@ function windowResized() {
 }
 
 function calculateFixedGrid() {
-  let availableWidth = width - 80; 
-  let availableHeight = height - 200; 
+  // Spazio riservato per testi e margini
+  let topSpace = 120;  // Spazio per data e ora
+  let bottomSpace = 100;  // Spazio per info griglia e messaggi
+  let sideMargin = 40;  // Margini laterali
   
-  let optimalBlockSize = 4; // Dimensione minima più grande
+  let availableWidth = width - (sideMargin * 2);
+  let availableHeight = height - topSpace - bottomSpace;
+  
+  let optimalBlockSize = 4;
   let bestCols = 0, bestRows = 0;
   
-  // Trova la dimensione ottimale dei blocchi
+  // Trova la dimensione ottimale dei blocchi che permette di vedere tutta la griglia
   for (let testSize = 12; testSize >= 4; testSize--) {
     let testCols = Math.floor(availableWidth / testSize);
     let testRows = Math.ceil(totalSecondsInDay / testCols);
@@ -34,26 +39,31 @@ function calculateFixedGrid() {
     }
   }
   
-  // Assicurati che i blocchi siano almeno 4px
-  blockSize = Math.max(optimalBlockSize, 4);
+  // Se non trovato con dimensioni normali, forza adattamento
+  if (bestCols === 0 || bestRows === 0) {
+    // Calcola le dimensioni massime possibili per far stare tutto
+    let maxCols = Math.floor(availableWidth / 4);  // Minimo 4px per blocco
+    let requiredRows = Math.ceil(totalSecondsInDay / maxCols);
+    let maxBlockHeight = Math.floor(availableHeight / requiredRows);
+    
+    optimalBlockSize = Math.max(2, Math.min(4, maxBlockHeight));
+    bestCols = Math.floor(availableWidth / optimalBlockSize);
+    bestRows = Math.ceil(totalSecondsInDay / bestCols);
+  }
+  
+  blockSize = optimalBlockSize;
   cols = bestCols;
   rows = bestRows;
-  
-  // Se non trovato, usa valori di fallback
-  if (cols === 0 || rows === 0) {
-    blockSize = 4;
-    cols = Math.floor(availableWidth / blockSize);
-    rows = Math.ceil(totalSecondsInDay / cols);
-  }
   
   gridWidth = cols * blockSize;
   gridHeight = rows * blockSize;
   
   gridStartX = (width - gridWidth) / 2;
-  gridStartY = (height - gridHeight) / 2 + 40; 
+  gridStartY = topSpace;
   
   // Debug: mostra i valori calcolati
   console.log(`Griglia: ${cols}x${rows}, Blocco: ${blockSize}px, Dimensioni: ${gridWidth}x${gridHeight}`);
+  console.log(`Spazio disponibile: ${availableWidth}x${availableHeight}, Finestra: ${width}x${height}`);
 }
 
 function draw() {
@@ -114,7 +124,7 @@ function drawGrid(secondsElapsed) {
     }
     
     stroke(30);
-    strokeWeight(1);
+    strokeWeight(blockSize > 2 ? 1 : 0); // Nascondi bordi per blocchi molto piccoli
     rect(x, y, blockSize, blockSize);
   }
 }
@@ -137,13 +147,13 @@ function displayTime(h, m, s) {
   textAlign(CENTER, BOTTOM);
   textSize(24); 
   textStyle(NORMAL);
-  text(dataStr, width/2, gridStartY - 80);
+  text(dataStr, width/2, gridStartY - 50);
   
   fill(255);
   textAlign(CENTER, BOTTOM);
   textSize(42); 
   textStyle(BOLD);
-  text(timeStr, width/2, gridStartY - 30);
+  text(timeStr, width/2, gridStartY - 10);
 }
 
 function displayMovingInfo(secondsElapsed) {
